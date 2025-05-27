@@ -1,9 +1,9 @@
-import React from 'react'
+import { Button } from "../components/ui/button";
 
 const Home = () => {
   return (
-    <div>
-      This is Home Page
+     <div className="flex flex-col items-center justify-center min-h-svh">
+      <Button>Click me</Button>
     </div>
   )
 }

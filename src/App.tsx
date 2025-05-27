@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 import './styles/App.scss'
 
 import Home from './pages/Home'
