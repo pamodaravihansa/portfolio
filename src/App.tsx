@@ -1,13 +1,14 @@
-import './styles/App.scss'
+import './styles/App.scss';
+import "./index.css";
 
-import Home from './pages/Home'
+import Homepage from './pages/Homepage';
 
 
 function App() {
 
   return (
     <>
-     <Home/>
+     <Homepage/>
     </>
   )
 }
