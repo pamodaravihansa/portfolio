@@ -234,5 +234,46 @@ body {
 
     }
 
+    .footer_section {
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+
+        .big_text {
+            font-family: 'Plus Jakarta Sans';
+            font-weight: 400;
+            font-size: 150px;
+            line-height: 1;
+            letter-spacing: -0.08em;
+            text-align: center;
+            color: transparent;
+            //-webkit-text-stroke: 1px #1e1e1e;
+            -webkit-text-stroke: 1px rgba(30, 30, 30, 0.2);
+            text-stroke: 1px #1e1e1e;
+        }
+    }
+
+    .bottom_section {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        
+
+        text-align: center;
+        
+
+        .footer_icons {
+            display: flex;
+            gap: 3rem;
+            justify-content: center;
+            img {
+                height: 24px;
+                width: 24px;
+                object-fit: contain;
+            }
+
+        }
+    }
+
 
 }

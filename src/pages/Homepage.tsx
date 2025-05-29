@@ -153,24 +153,24 @@ const Homepage = () => {
               </p>
               <div className="about_buttons">
                 <a href="#">
-                <div className="about_btn">
-                  <p className="font-pjs-b2-sb">See some photos I took</p>
-                  <img src={UpArrow}
-                    height={17}
-                    width={17}
-                    alt="Link Up Arrow"
-                  />
-                </div>
+                  <div className="about_btn">
+                    <p className="font-pjs-b2-sb">See some photos I took</p>
+                    <img src={UpArrow}
+                      height={17}
+                      width={17}
+                      alt="Link Up Arrow"
+                    />
+                  </div>
                 </a>
                 <a href="#">
-                <div className="about_btn">
-                  <p className="font-pjs-b2-sb">Let’s connect on Instagram!</p>
-                  <img src={UpArrow}
-                    height={17}
-                    width={17}
-                    alt="Link Up Arrow"
-                  />
-                </div>
+                  <div className="about_btn">
+                    <p className="font-pjs-b2-sb">Let’s connect on Instagram!</p>
+                    <img src={UpArrow}
+                      height={17}
+                      width={17}
+                      alt="Link Up Arrow"
+                    />
+                  </div>
                 </a>
               </div>
             </div>
@@ -253,6 +253,24 @@ const Homepage = () => {
         </div>
 
         <div className="section-divider" />
+
+        <div className="footer_section">
+          <span className="big_text">pamoda.me</span>
+          <div className="bottom_section">
+            <span className="font-pjs-b1-l">© 2025. Designed & Developed by Pamoda Ravihansa.</span>
+            <div className="footer_icons">
+              <img src={BehanceIcon}
+                alt="Behance Icn"
+              />
+              <img src={DribbbleIcon}
+                alt="Behance Icn"
+              />
+              <img src={LinkedInMyIcon}
+                alt="Behance Icn"
+              />
+            </div>
+          </div>
+        </div>
 
       </div>
     </>
