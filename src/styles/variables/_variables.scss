@@ -1,0 +1,81 @@
+//Color variables
+$primary-color: #1E1E1E;
+$primary-text-color: #1E1E1E;
+$secondary-text-color: #3e3e3e;
+$tertiary-text-color: #6e6e6e;
+$line-color: #EDEDED;
+$background-color: #FFFFFF;
+
+//Font classes
+.font-pjs-h1 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-style: normal;
+    font-weight:700;
+    font-size :3rem;
+    line-height :1.2;
+    letter-spacing :-0.04em;
+}
+
+.font-pjs-h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-style: normal;
+    font-weight:600;
+    font-size :2rem;
+    line-height :1.2;
+    letter-spacing :-0.04em;
+}
+
+.font-pjs-h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-style: normal;
+    font-weight:500;
+    font-size :1.5rem;
+    line-height :1.2;
+    letter-spacing :-0.04em;
+}
+
+.font-pjs-h4 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-style: normal;
+    font-weight:600;
+    font-size :1.25rem;
+    line-height :1.2;
+    letter-spacing :-0.04em;
+}
+
+
+.font-pjs-b1-m {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-style: normal;
+    font-weight:500;
+    font-size :1rem;
+    line-height :1.5;
+    letter-spacing :-0.02em;
+}
+
+.font-pjs-b1-l {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-style: normal;
+    font-weight:300;
+    font-size : 1rem;
+    line-height :1.5;
+    letter-spacing :-0.02em;
+}
+
+.font-pjs-b2-b {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-style: normal;
+    font-weight:700;
+    font-size :0.875rem;
+    line-height :1.2;
+    letter-spacing :-0.01em;
+}
+
+.font-pjs-b2-sb {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-style: normal;
+    font-weight:600;
+    font-size :0.875rem;
+    line-height :1.2;
+    letter-spacing :-0.01em;
+}

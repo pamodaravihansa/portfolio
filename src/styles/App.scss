@@ -1,7 +1,7 @@
-@use './helpers/browserdetection';
-@use './helpers/reset';
+@use './helpers/browserdetection' as *;
+@use './helpers/reset' as *;
 
-@use './pages/baselayout';
-@use './pages/home';
+@use './variables/variables' as *;
 
 
+@use './pages/home' as *;
