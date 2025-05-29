@@ -18,6 +18,7 @@ import heroimage3x from "../assets/images/homepage/hero_image3x.png";
 import CafeprojectThumbnail from "../assets/images/homepage/cafe_project_thumbnail2x.png";
 
 import AboutMeImage from "../assets/images/homepage/about_me_photos.png";
+import UpArrow from "../assets/icons/up-arrow.svg";
 
 import SyscoLabsLogo from "../assets/images/homepage/sysco-labs-logo.svg";
 
@@ -150,6 +151,28 @@ const Homepage = () => {
               <p className="font-pjs-b1-l">
                 Beyond design and development, I also have a love for<span className="font-pjs-b1-m"> photography,</span>  especially macro and wildlife photography.
               </p>
+              <div className="about_buttons">
+                <a href="#">
+                <div className="about_btn">
+                  <p className="font-pjs-b2-sb">See some photos I took</p>
+                  <img src={UpArrow}
+                    height={17}
+                    width={17}
+                    alt="Link Up Arrow"
+                  />
+                </div>
+                </a>
+                <a href="#">
+                <div className="about_btn">
+                  <p className="font-pjs-b2-sb">Let’s connect on Instagram!</p>
+                  <img src={UpArrow}
+                    height={17}
+                    width={17}
+                    alt="Link Up Arrow"
+                  />
+                </div>
+                </a>
+              </div>
             </div>
           </div>
           <img src={AboutMeImage}

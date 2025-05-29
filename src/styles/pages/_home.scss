@@ -147,6 +147,29 @@ body {
             height: auto;
         }
 
+        .about_me_description {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+
+            .about_buttons {
+                display: flex;
+                gap: 1.5rem;
+
+                .about_btn {
+                    display: flex;
+                    gap: 0.25rem;
+
+                }
+
+                img {
+                    height: 17px;
+                    width: 17px;
+                    object-fit: contain;
+                }
+            }
+        }
+
     }
 
     .worked_companies_section {
@@ -205,7 +228,7 @@ body {
                 font-weight: 400;
                 font-size: 24px;
                 color: $secondary-text-color;
-                
+
             }
         }
 
