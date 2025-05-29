@@ -15,6 +15,9 @@ import heroimage1x from "../assets/images/homepage/hero_image.png";
 import heroimage2x from "../assets/images/homepage/hero_image2x.png";
 import heroimage3x from "../assets/images/homepage/hero_image3x.png";
 
+import CafeprojectThumbnail from "../assets/images/homepage/cafe_project_thumbnail2x.png";
+
+import AboutMeImage from "../assets/images/homepage/about_me_photos.png";
 
 const Homepage = () => {
   return (
@@ -92,10 +95,68 @@ const Homepage = () => {
             <Button variant="outline" className="pt-[12px] pb-[13px] px-[24px] leading-[1.2]">See my Resume</Button>
           </div>
 
+        </div>
+
+        <div className="section-divider" />
+
+        <div className="work_container">
+          <h2 className="font-pjs-h2">Check Out My Cool Projects!</h2>
+
+          <div className="project_card">
+            <img
+              src={CafeprojectThumbnail}
+              width={568}
+              height={375}
+              alt="Cafe Website Project Thumbnail"
+            />
+            <div className="project_text_container">
+              <p className="font-pjs-b1-l">Web Design  /  UI Design  /  UI Showcase</p>
+              <h3 className="font-pjs-h3">
+                Website Design for a Charming European Cafe Shop, Showcasing Authentic Cuisine and Inviting Atmosphere
+              </h3>
+            </div>
+          </div>
+
+          <div className="project_card">
+            <img
+              src={CafeprojectThumbnail}
+              width={568}
+              height={375}
+              alt="Cafe Website Project Thumbnail"
+            />
+            <div className="project_text_container">
+              <p className="font-pjs-b1-l">Web Design  /  UI Design  /  UI Showcase</p>
+              <h3 className="font-pjs-h3">
+                Website Design for a Charming European Cafe Shop, Showcasing Authentic Cuisine and Inviting Atmosphere
+              </h3>
+            </div>
+          </div>
+
 
         </div>
 
         <div className="section-divider" />
+
+        <div className="about_container">
+          <div className="about_text_section">
+            <h2 className="font-pjs-h2">A Little Bit About Me!</h2>
+            <div className="about_me_description">
+              <p className="font-pjs-b1-l">
+                I am an <span className="font-pjs-b1-m">Information Technology graduate from SLIIT. </span>My UX Design journey started in university, where I found my passion for<span className="font-pjs-b1-m"> solving problems through design.</span> Since then I expanded my knowledge through bootcamps and online resources, always want to enhance my skills!
+              </p>
+              <p className="font-pjs-b1-l">
+                Beyond design and development, I also have a love for<span className="font-pjs-b1-m"> photography,</span>  especially macro and wildlife photography.
+              </p>
+            </div>
+          </div>
+          <img src={AboutMeImage}
+            width={600}
+            height={297}
+            alt="Pamoda's Portraits"
+          />
+        
+          
+        </div>
 
 
 
