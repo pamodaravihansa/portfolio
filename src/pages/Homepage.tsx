@@ -222,6 +222,15 @@ const Homepage = () => {
 
         <div className="section-divider" />
 
+        <div className="contact_section">
+          <h2 className="font-pjs-h2">I'd love to hear from you!</h2>
+          <div className="email_container">
+            <p>pamoda.ravihansa@gmail.com</p>
+          </div>
+        </div>
+
+        <div className="section-divider" />
+
       </div>
     </>
 
