@@ -19,6 +19,9 @@ import CafeprojectThumbnail from "../assets/images/homepage/cafe_project_thumbna
 
 import AboutMeImage from "../assets/images/homepage/about_me_photos.png";
 
+import SyscoLabsLogo from "../assets/images/homepage/sysco-labs-logo.svg";
+
+
 const Homepage = () => {
   return (
     <>
@@ -99,7 +102,7 @@ const Homepage = () => {
 
         <div className="section-divider" />
 
-        <div className="work_container">
+        <div className="projects_container">
           <h2 className="font-pjs-h2">Check Out My Cool Projects!</h2>
 
           <div className="project_card">
@@ -117,7 +120,7 @@ const Homepage = () => {
             </div>
           </div>
 
-          <div className="project_card">
+          {/* <div className="project_card">
             <img
               src={CafeprojectThumbnail}
               width={568}
@@ -130,7 +133,7 @@ const Homepage = () => {
                 Website Design for a Charming European Cafe Shop, Showcasing Authentic Cuisine and Inviting Atmosphere
               </h3>
             </div>
-          </div>
+          </div> */}
 
 
         </div>
@@ -154,12 +157,70 @@ const Homepage = () => {
             height={297}
             alt="Pamoda's Portraits"
           />
-        
-          
         </div>
 
+        <div className="section-divider" />
 
+        <div className="work_container">
+          <div className="work_text_section">
+            <h2 className="font-pjs-h2">Let's Talk About My Work Journey!</h2>
+            <div className="about_me_description">
+              <p className="font-pjs-b1-l">
+                Hi, I’m a UX Designer & Engineer with<span className="font-pjs-b1-m"> 2 years of experience.</span> During my career, I worked at service based startup and product based company. I worked on<span className="font-pjs-b1-m"> web and product design,</span> and I handled<span className="font-pjs-b1-m"> UI development</span>  as well.
+              </p>
+            </div>
+          </div>
+          <div className="worked_companies_section">
 
+            <div className="company_row">
+              <div className="company_text">
+                <h4 className="font-pjs-h4">Junior UX Engineer</h4>
+                <p className="font-pjs-b1-l">February 2024 - May 2025</p>
+              </div>
+              <div className="company_logo_container">
+                <img src={SyscoLabsLogo}
+                  className="sysco_labs_logo"
+                  height={20}
+                  width={92}
+                  alt="Sysco LABS Logo"
+                />
+              </div>
+            </div>
+
+            <div className="company_row">
+              <div className="company_text">
+                <h4 className="font-pjs-h4">Associate UI/UX Designer</h4>
+                <p className="font-pjs-b1-l">September 2023 - December 2023</p>
+              </div>
+              <div className="company_logo_container">
+                <img src={SyscoLabsLogo}
+                  className="sysco_labs_logo"
+                  height={20}
+                  width={92}
+                  alt="Sysco LABS Logo"
+                />
+              </div>
+            </div>
+
+            <div className="company_row">
+              <div className="company_text">
+                <h4 className="font-pjs-h4">UI/UX Designer Intern</h4>
+                <p className="font-pjs-b1-l">March 2023 - August 2023</p>
+              </div>
+              <div className="company_logo_container">
+                <img src={SyscoLabsLogo}
+                  className="sysco_labs_logo"
+                  height={20}
+                  width={92}
+                  alt="Sysco LABS Logo"
+                />
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div className="section-divider" />
 
       </div>
     </>
