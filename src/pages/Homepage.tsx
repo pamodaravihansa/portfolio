@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import { buttonVariants, Button } from "../components/ui/button";
 import { Separator } from "../components/ui/separator";
 import { cn } from "../lib/utils";
+import { SmoothCursor } from "../components/ui/smooth-cursor";
+
 
 import HomeIcon from "../assets/icons/home-icon.svg";
 import BehanceIcon from "../assets/icons/behance-icon.svg";
@@ -26,6 +28,7 @@ import SyscoLabsLogo from "../assets/images/homepage/sysco-labs-logo.svg";
 const Homepage = () => {
   return (
     <>
+      <SmoothCursor />
       <div className="dock_wrapper">
         <Dock direction="middle">
           <DockIcon>
@@ -73,7 +76,7 @@ const Homepage = () => {
           <div className="hero_text_container">
             <div className="hero_title_text">
               <div className="lne_1">
-                <h1 className="font-pjs-h2">Hey, I’m</h1>
+                <h1 className="font-pjs-h1">Hey, I’m</h1>
                 <img
                   src={heroimage1x}
                   srcSet={`${heroimage1x} 1x, ${heroimage2x} 2x, ${heroimage3x} 3x`}
@@ -81,10 +84,10 @@ const Homepage = () => {
                   height={50}
                   alt="Pamoda Face"
                 />
-                <h1 className="font-pjs-h2">Pamoda</h1>
+                <h1 className="font-pjs-h1">Pamoda</h1>
               </div>
               <div className="line_2">
-                <h1 className="font-pjs-h2">Designer & Problem Solver</h1>
+                <h1 className="font-pjs-h1">Designer & Problem Solver</h1>
               </div>
             </div>
             <div className="hero_description">

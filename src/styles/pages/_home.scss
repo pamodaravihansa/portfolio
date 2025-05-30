@@ -4,6 +4,9 @@ body {
     font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui;
     background-color: $background-color;
     color: $primary-text-color;
+
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
 }
 
 .dock_wrapper {
@@ -22,6 +25,7 @@ body {
 
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 2.5rem;
     padding-left: 7.5rem;
     padding-right: 7.5rem;
 
@@ -247,8 +251,8 @@ body {
             letter-spacing: -0.08em;
             text-align: center;
             color: transparent;
-            //-webkit-text-stroke: 1px #1e1e1e;
-            -webkit-text-stroke: 1px rgba(30, 30, 30, 0.2);
+            -webkit-text-stroke: 1px #CCCCCC;
+            //-webkit-text-stroke: 1px rgba(30, 30, 30, 0.3);
             text-stroke: 1px #1e1e1e;
         }
     }
@@ -257,15 +261,16 @@ body {
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
-        
+
 
         text-align: center;
-        
+
 
         .footer_icons {
             display: flex;
-            gap: 3rem;
+            gap: 2rem;
             justify-content: center;
+
             img {
                 height: 24px;
                 width: 24px;
