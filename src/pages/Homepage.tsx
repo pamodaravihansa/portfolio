@@ -8,6 +8,7 @@ import { cn } from "../lib/utils";
 import { SmoothCursor } from "../components/ui/smooth-cursor";
 
 
+
 import HomeIcon from "../assets/icons/home-icon.svg";
 import BehanceIcon from "../assets/icons/behance-icon.svg";
 import DribbbleIcon from "../assets/icons/dribbble-icon.svg";
@@ -23,7 +24,7 @@ import AboutMeImage from "../assets/images/homepage/about_me_photos.png";
 import UpArrow from "../assets/icons/up-arrow.svg";
 
 import SyscoLabsLogo from "../assets/images/homepage/sysco-labs-logo.svg";
-
+import Code94LabsLogo from "../assets/images/homepage/code94-labs-logo.svg";
 
 const Homepage = () => {
   return (
@@ -219,11 +220,11 @@ const Homepage = () => {
                 <p className="font-pjs-b1-l">September 2023 - December 2023</p>
               </div>
               <div className="company_logo_container">
-                <img src={SyscoLabsLogo}
-                  className="sysco_labs_logo"
-                  height={20}
-                  width={92}
-                  alt="Sysco LABS Logo"
+                <img src={Code94LabsLogo}
+                  className="code94_labs_logo"
+                  height={105}
+                  width={12}
+                  alt="Code94 LABS Logo"
                 />
               </div>
             </div>
@@ -234,11 +235,11 @@ const Homepage = () => {
                 <p className="font-pjs-b1-l">March 2023 - August 2023</p>
               </div>
               <div className="company_logo_container">
-                <img src={SyscoLabsLogo}
-                  className="sysco_labs_logo"
-                  height={20}
-                  width={92}
-                  alt="Sysco LABS Logo"
+                <img src={Code94LabsLogo}
+                  className="code94_labs_logo"
+                  height={105}
+                  width={12}
+                  alt="Code94 LABS Logo"
                 />
               </div>
             </div>
@@ -252,6 +253,7 @@ const Homepage = () => {
           <h2 className="font-pjs-h2">I'd love to hear from you!</h2>
           <div className="email_container">
             <p>pamoda.ravihansa@gmail.com</p>
+            
           </div>
         </div>
 
