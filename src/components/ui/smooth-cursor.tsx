@@ -90,6 +90,7 @@ export function SmoothCursor({
   },
 }: SmoothCursorProps) {
   const [isMoving, setIsMoving] = useState(false);
+  const [hidden, setHidden] = useState(false);
   const lastMousePos = useRef<Position>({ x: 0, y: 0 });
   const velocity = useRef<Position>({ x: 0, y: 0 });
   const lastUpdateTime = useRef(Date.now());
@@ -173,8 +174,18 @@ export function SmoothCursor({
     document.body.style.cursor = "none";
     window.addEventListener("mousemove", throttledMouseMove);
 
+    // Toggle cursor visibility when inside .dock_wrapper
+    const toggleVisibility = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      const isInDock = target.closest(".dock_wrapper");
+      const isInHiddenZone = target.closest("[data-hide-cursor]");
+      setHidden(!!(isInDock || isInHiddenZone));
+    };
+    window.addEventListener("mousemove", toggleVisibility);
+
     return () => {
       window.removeEventListener("mousemove", throttledMouseMove);
+      window.removeEventListener("mousemove", toggleVisibility);
       document.body.style.cursor = "auto";
       if (rafId) cancelAnimationFrame(rafId);
     };
@@ -193,6 +204,7 @@ export function SmoothCursor({
         zIndex: 1001,
         pointerEvents: "none",
         willChange: "transform",
+        opacity: hidden ? 0 : 1,
       }}
       initial={{ scale: 0 }}
       animate={{ scale: 1 }}

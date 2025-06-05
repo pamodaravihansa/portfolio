@@ -14,7 +14,10 @@ body {
     left: 50%;
     transform: translate(-50%);
     z-index: 1000;
+    cursor: pointer;
 }
+
+
 
 .main_container {
     display: flex;
@@ -216,7 +219,7 @@ body {
 
                 .code94_labs_logo {
                     height: 12px;
-                    width: 105px;
+                    width: 102px;
                     object-fit: contain;
                 }
 
@@ -234,6 +237,9 @@ body {
 
         .email_container {
             display: flex;
+            gap: 1rem;
+            justify-content: flex-start;
+            align-items: center;
 
             p {
                 font-family: 'Plus Jakarta Sans';

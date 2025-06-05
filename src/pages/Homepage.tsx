@@ -6,8 +6,9 @@ import { buttonVariants, Button } from "../components/ui/button";
 import { Separator } from "../components/ui/separator";
 import { cn } from "../lib/utils";
 import { SmoothCursor } from "../components/ui/smooth-cursor";
-
-
+import { PointerHighlight } from "../components/ui/pointer-highlight";
+import { Copy, Check } from "lucide-react";
+import { useState, useEffect } from "react";
 
 import HomeIcon from "../assets/icons/home-icon.svg";
 import BehanceIcon from "../assets/icons/behance-icon.svg";
@@ -27,12 +28,21 @@ import SyscoLabsLogo from "../assets/images/homepage/sysco-labs-logo.svg";
 import Code94LabsLogo from "../assets/images/homepage/code94-labs-logo.svg";
 
 const Homepage = () => {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText("pamoda.ravihansa@gmail.com").then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1500);
+    });
+  };
+
   return (
     <>
       <SmoothCursor />
       <div className="dock_wrapper">
-        <Dock direction="middle">
-          <DockIcon>
+        <Dock direction="middle" className="my_dock">
+          <DockIcon className="dock_icon">
             <Link
               to="#"
               aria-label="Home"
@@ -48,7 +58,7 @@ const Homepage = () => {
           <Separator orientation="vertical" className="h-full" />
 
           {[{ icon: BehanceIcon, label: "Behance" }, { icon: DribbbleIcon, label: "Dribbble" }, { icon: LinkedInMyIcon, label: "LinkedIn" }].map((item) => (
-            <DockIcon key={item.label}>
+            <DockIcon key={item.label} className="dock_icon">
               <Link
                 to="#"
                 aria-label={item.label}
@@ -65,7 +75,7 @@ const Homepage = () => {
           <Separator orientation="vertical" className="h-full " />
 
 
-          <Button variant="default" className="pt-[12px] pb-[13px] px-[24px] leading-[1.2]">See my Resume</Button>
+          <Button variant="default" data-hide-cursor className="pt-[12px] pb-[13px] px-[24px] leading-[1.2]">See My Resume</Button>
 
 
         </Dock>
@@ -88,7 +98,15 @@ const Homepage = () => {
                 <h1 className="font-pjs-h1">Pamoda</h1>
               </div>
               <div className="line_2">
-                <h1 className="font-pjs-h1">Designer & Problem Solver</h1>
+                <h1 className="font-pjs-h1">
+                  {/* <PointerHighlight
+                    //rectangleClassName="bg-[#8CC3EE]/20 border border-solid border-[#428DE2] text-[#1e1e1e] leading-loose"
+                    // rectangleClassName="bg-transparent border border-solid border-[#6e6e6e] text-[#1e1e1e] leading-loose"
+                    pointerClassName="text-[#1e1e1e] h-4 w-4"
+                    containerClassName="inline-block mr-1">
+                    <span>Designer</span>
+                  </PointerHighlight> */}
+                  <span>Designer & Problem Solver</span></h1>
               </div>
             </div>
             <div className="hero_description">
@@ -99,8 +117,8 @@ const Homepage = () => {
             </div>
           </div>
           <div className="cta_buttons">
-            <Button variant="default" className="pt-[12px] pb-[13px] px-[24px] leading-[1.2]">See my Work</Button>
-            <Button variant="outline" className="pt-[12px] pb-[13px] px-[24px] leading-[1.2]">See my Resume</Button>
+            <Button variant="default" data-hide-cursor className="pt-[12px] pb-[13px] px-[24px] leading-[1.2]">See My Work</Button>
+            <Button variant="outline" data-hide-cursor className="pt-[12px] pb-[13px] px-[24px] leading-[1.2]">See My Resume</Button>
           </div>
 
         </div>
@@ -222,7 +240,7 @@ const Homepage = () => {
               <div className="company_logo_container">
                 <img src={Code94LabsLogo}
                   className="code94_labs_logo"
-                  height={105}
+                  height={102}
                   width={12}
                   alt="Code94 LABS Logo"
                 />
@@ -237,7 +255,7 @@ const Homepage = () => {
               <div className="company_logo_container">
                 <img src={Code94LabsLogo}
                   className="code94_labs_logo"
-                  height={105}
+                  height={102}
                   width={12}
                   alt="Code94 LABS Logo"
                 />
@@ -251,16 +269,27 @@ const Homepage = () => {
 
         <div className="contact_section">
           <h2 className="font-pjs-h2">I'd love to hear from you!</h2>
-          <div className="email_container">
-            <p>pamoda.ravihansa@gmail.com</p>
-            
+          <div className="email_container items-center gap-2">
+            <p className="font-pjs-b1-l">pamoda.ravihansa@gmail.com</p>
+            <Button
+              data-hide-cursor
+              onClick={handleCopy}
+              variant="outline"
+              size="icon"
+              className=" transition-all duration-300 border solid border-[#EDEDED]"
+              aria-label="Copy email"
+            >
+              {copied ? <Check className="w-4 h-4 text-[#3e3e3e]" /> : <Copy className="w-4 h-4 text-[#3e3e3e]" />}
+            </Button>
           </div>
         </div>
 
         <div className="section-divider" />
 
         <div className="footer_section">
+
           <span className="big_text">pamoda.me</span>
+
           <div className="bottom_section">
             <span className="font-pjs-b1-l">© 2025. Designed & Developed by Pamoda Ravihansa.</span>
             <div className="footer_icons">
@@ -277,7 +306,7 @@ const Homepage = () => {
           </div>
         </div>
 
-      </div>
+      </div >
     </>
 
   );
