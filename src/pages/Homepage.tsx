@@ -6,9 +6,10 @@ import { buttonVariants, Button } from "../components/ui/button";
 import { Separator } from "../components/ui/separator";
 import { cn } from "../lib/utils";
 import { SmoothCursor } from "../components/ui/smooth-cursor";
-import { PointerHighlight } from "../components/ui/pointer-highlight";
-import { Copy, Check } from "lucide-react";
+import { Check } from "lucide-react";
+import { Copy, } from "iconsax-react";
 import { useState, useEffect } from "react";
+import { PointerHighlight } from "../components/ui/pointer-highlight";
 
 import HomeIcon from "../assets/icons/home-icon.svg";
 import BehanceIcon from "../assets/icons/behance-icon.svg";
@@ -28,6 +29,7 @@ import SyscoLabsLogo from "../assets/images/homepage/sysco-labs-logo.svg";
 import Code94LabsLogo from "../assets/images/homepage/code94-labs-logo.svg";
 
 const Homepage = () => {
+
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
@@ -93,20 +95,14 @@ const Homepage = () => {
                   srcSet={`${heroimage1x} 1x, ${heroimage2x} 2x, ${heroimage3x} 3x`}
                   width={85}
                   height={50}
-                  alt="Pamoda Face"
+                  alt="Pamoda's Potrait"
                 />
                 <h1 className="font-pjs-h1">Pamoda</h1>
               </div>
               <div className="line_2">
                 <h1 className="font-pjs-h1">
-                  {/* <PointerHighlight
-                    //rectangleClassName="bg-[#8CC3EE]/20 border border-solid border-[#428DE2] text-[#1e1e1e] leading-loose"
-                    // rectangleClassName="bg-transparent border border-solid border-[#6e6e6e] text-[#1e1e1e] leading-loose"
-                    pointerClassName="text-[#1e1e1e] h-4 w-4"
-                    containerClassName="inline-block mr-1">
-                    <span>Designer</span>
-                  </PointerHighlight> */}
-                  <span>Designer & Problem Solver</span></h1>
+                  <span>Designer & Problem Solver</span>
+                </h1>
               </div>
             </div>
             <div className="hero_description">
@@ -136,27 +132,12 @@ const Homepage = () => {
               alt="Cafe Website Project Thumbnail"
             />
             <div className="project_text_container">
-              <p className="font-pjs-b1-l">Web Design  /  UI Design  /  UI Showcase</p>
+              <p className="font-pjs-b1-l">Web Design &nbsp; / &nbsp; UI Design &nbsp; / &nbsp; UI Showcase</p>
               <h3 className="font-pjs-h3">
                 Website Design for a Charming European Cafe Shop, Showcasing Authentic Cuisine and Inviting Atmosphere
               </h3>
             </div>
           </div>
-
-          {/* <div className="project_card">
-            <img
-              src={CafeprojectThumbnail}
-              width={568}
-              height={375}
-              alt="Cafe Website Project Thumbnail"
-            />
-            <div className="project_text_container">
-              <p className="font-pjs-b1-l">Web Design  /  UI Design  /  UI Showcase</p>
-              <h3 className="font-pjs-h3">
-                Website Design for a Charming European Cafe Shop, Showcasing Authentic Cuisine and Inviting Atmosphere
-              </h3>
-            </div>
-          </div> */}
 
 
         </div>
@@ -279,7 +260,7 @@ const Homepage = () => {
               className=" transition-all duration-300 border solid border-[#EDEDED]"
               aria-label="Copy email"
             >
-              {copied ? <Check className="w-4 h-4 text-[#3e3e3e]" /> : <Copy className="w-4 h-4 text-[#3e3e3e]" />}
+              {copied ? <Check className="w-4 h-4 text-[#3e3e3e]" /> : <Copy size="16" color="#3e3e3e" variant="Linear" />}
             </Button>
           </div>
         </div>
@@ -288,7 +269,10 @@ const Homepage = () => {
 
         <div className="footer_section">
 
-          <span className="big_text">pamoda.me</span>
+          <PointerHighlight>
+            <span className="big_text">pamoda.me</span>
+          </PointerHighlight>
+          
 
           <div className="bottom_section">
             <span className="font-pjs-b1-l">© 2025. Designed & Developed by Pamoda Ravihansa.</span>
