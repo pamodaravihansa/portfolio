@@ -86,7 +86,7 @@ const Homepage = () => {
         </Dock>
       </div>
 
-  {/* animate-fadeIn */}
+      {/* animate-fadeIn */}
       <motion.div
         className="main_container"
         initial={{ opacity: 0, y: 32 }}
@@ -120,9 +120,9 @@ const Homepage = () => {
 
             <div className="hero_description">
               <p className="font-pjs-b1-l">
-                  Hi, I’m a UX Designer with<span className="font-pjs-b1-m">2 years of experience.</span><br></br>
-                  Previously worked at <span className="font-pjs-b1-m">Sysco LABS</span> as a <span className="font-pjs-b1-m">Junior UX Engineer.</span> I work on web and product design, and I handle UI development as well.
-             
+                Hi, I’m a UX Designer with<span className="font-pjs-b1-m">2 years of experience.</span><br></br>
+                Previously worked at <span className="font-pjs-b1-m">Sysco LABS</span> as a <span className="font-pjs-b1-m">Junior UX Engineer.</span> I work on web and product design, and I handle UI development as well.
+
               </p>
             </div>
           </div>
@@ -135,7 +135,13 @@ const Homepage = () => {
 
         <div className="section-divider" />
 
-        <div className="projects_container">
+        <motion.div
+          className="projects_container"
+          initial={{ opacity: 0, y: 48 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.3 }}
+        >
           <h2 className="font-pjs-h2">Check Out My Cool Projects!</h2>
 
           <Link to="/projects/cafe" data-hide-cursor className="project_card">
@@ -152,13 +158,17 @@ const Homepage = () => {
               </h3>
             </div>
           </Link>
-
-
-        </div>
+        </motion.div>
 
         <div className="section-divider" />
 
-        <div className="about_container">
+        <motion.div
+          className="about_container"
+          initial={{ opacity: 0, y: 48 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.3 }}
+        >
           <div className="about_text_section">
             <h2 className="font-pjs-h2">A Little Bit About Me!</h2>
             <div className="about_me_description">
@@ -197,11 +207,17 @@ const Homepage = () => {
             height={297}
             alt="Pamoda's Portraits"
           />
-        </div>
+        </motion.div>
 
         <div className="section-divider" />
 
-        <div className="work_container">
+        <motion.div
+          className="work_container"
+          initial={{ opacity: 0, y: 48 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.3 }}
+        >
           <div className="work_text_section">
             <h2 className="font-pjs-h2">Let's Talk About My Work Journey!</h2>
             <div className="about_me_description">
@@ -258,11 +274,17 @@ const Homepage = () => {
             </div>
 
           </div>
-        </div>
+        </motion.div>
 
         <div className="section-divider" />
 
-        <div className="contact_section">
+        <motion.div
+          className="contact_section"
+          initial={{ opacity: 0, y: 48 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.3 }}
+        >
           <h2 className="font-pjs-h2">I'd love to hear from you!</h2>
           <div className="email_container items-center gap-2">
             <p className="font-pjs-b1-l">pamoda.ravihansa@gmail.com</p>
@@ -277,19 +299,113 @@ const Homepage = () => {
               {copied ? <Check className="w-4 h-4 text-[#3e3e3e]" /> : <Copy size="16" color="#3e3e3e" variant="Linear" />}
             </Button>
           </div>
-        </div>
+        </motion.div>
 
         <div className="section-divider" />
 
-        <div className="footer_section">
-          {/* <PointerHighlight
-            rectangleClassName="bg-transparent border-[1px] border-solid border-[#ededed]"
-            pointerClassName="text-[#2e2e2e]">
-            <span data-hide-cursor data-item="pamoda.me " className="big_text">pamoda.me</span>
-          </PointerHighlight> */}
+        <motion.div
+          className="footer_section"
+          initial={{ opacity: 0, y: 48 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.3 }}
+        >
+
+          {/* <span
+            data-hide-cursor
+            data-item="pamoda.me"
+            className="big_text"
+            style={{ display: "inline-flex", gap: "0.02em" }}
+          >
+            {"pamoda.me".split("").map((char, index) => (
+              <motion.span
+                key={index}
+                whileHover={{
+                  y: -10,
+                  // color: "#1e1e1e",
+                  // WebkitTextStrokeColor: "transparent",
+                  color: "transparent",
+                  WebkitTextStroke: "1px #CCCCCC",
+                  transition: {
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 10,
+                  },
+                }}
+                style={{
+                  display: "inline-block",
+                  color: "transparent",
+                  WebkitTextStroke: "1px #CCCCCC",
+                }}
+              >
+                {char}
+              </motion.span>
+            ))}
+          </span> */}
 
 
-          <span data-hide-cursor data-item="pamoda.me " className="big_text">pamoda.me</span>
+          <span
+            data-hide-cursor
+            data-item="pamoda.me"
+            className="big_text"
+            style={{ display: "inline-flex", gap: "0.02em" }}
+          >
+            {"pamoda.me".split("").map((char, index) => (
+              <motion.span
+                key={index}
+                whileHover={{
+                  scaleX: 1.3,
+                  scaleY: 0.7,
+                  color: "#1e1e1e",
+                  WebkitTextStroke: "0px",
+                  transition: {
+                    type: "spring",
+                    stiffness: 500,
+                    damping: 15,
+                  },
+                }}
+                style={{
+                  display: "inline-block",
+                  color: "transparent",
+                  WebkitTextStroke: "1px #CCCCCC",
+                }}
+              >
+                {char}
+              </motion.span>
+            ))}
+          </span>
+
+
+          {/* <span
+            data-hide-cursor
+            data-item="pamoda.me"
+            className="big_text"
+            style={{ display: "inline-flex", gap: "0.02em" }}
+          >
+            {"pamoda.me".split("").map((char, index) => (
+              <motion.span
+                key={index}
+                whileHover={{
+                  skewY: -10,
+                  color: "transparent",
+                  WebkitTextStroke: "1px #CCCCCC",
+                  // color: "#1e1e1e",
+                  // WebkitTextStrokeColor: "transparent",
+                  transition: {
+                    duration: 0.3,
+                    ease: "easeInOut",
+                  },
+                }}
+                style={{
+                  display: "inline-block",
+                  color: "transparent",
+                  WebkitTextStroke: "1px #CCCCCC",
+                }}
+              >
+                {char}
+              </motion.span>
+            ))}
+          </span> */}
 
 
           <div className="bottom_section">
@@ -308,7 +424,7 @@ const Homepage = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
       </motion.div >
     </>

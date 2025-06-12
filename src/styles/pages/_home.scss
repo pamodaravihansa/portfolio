@@ -291,12 +291,12 @@ body {
 
         .big_text {
             cursor: pointer;
-            position: absolute;
+            //position: absolute;
             font-family: 'Plus Jakarta Sans';
             font-weight: 400;
             font-size: 9rem;
             line-height: normal;
-            letter-spacing: -0.05em;
+            letter-spacing: -0.08em;
             text-align: center;
             color: white;
             -webkit-text-stroke: 1px #CCCCCC;
@@ -306,26 +306,26 @@ body {
 
         }
 
-        .big_text::before {
-            content: attr(data-item);
-            position: absolute;
-            inset: 0;
-            color: #1e1e1e;
-            width: 0;
-            overflow: hidden;
-            white-space: nowrap;
-            color: $primary-text-color;
-            background-clip: text;
-            -webkit-background-clip: text;
-            transition: width 1s ease-in-out;
-            // transition: width 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-            -webkit-text-stroke: 0;
+        // .big_text::before {
+        //     content: attr(data-item);
+        //     position: absolute;
+        //     inset: 0;
+        //     color: #1e1e1e;
+        //     width: 0;
+        //     overflow: hidden;
+        //     white-space: nowrap;
+        //     color: $primary-text-color;
+        //     background-clip: text;
+        //     -webkit-background-clip: text;
+        //     transition: width 1s ease-in-out;
+        //     // transition: width 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        //     -webkit-text-stroke: 0;
 
-        }
+        // }
 
-        .big_text:hover::before {
-            width: 100%;
-        }
+        // .big_text:hover::before {
+        //     width: 100%;
+        // }
 
 
 
