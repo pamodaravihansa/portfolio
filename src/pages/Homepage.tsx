@@ -50,6 +50,7 @@ const Homepage = () => {
           <DockIcon className="dock_icon">
             <Link
               to="#"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               aria-label="Home"
               className={cn(
                 buttonVariants({ variant: "ghost", size: "icon" }),
@@ -62,10 +63,16 @@ const Homepage = () => {
 
           <Separator orientation="vertical" className="h-full" />
 
-          {[{ icon: BehanceIcon, label: "Behance" }, { icon: DribbbleIcon, label: "Dribbble" }, { icon: LinkedInMyIcon, label: "LinkedIn" }].map((item) => (
+         {[
+            { icon: BehanceIcon, label: "Behance", url: "https://www.behance.net/pamodaravihansa" },
+            { icon: DribbbleIcon, label: "Dribbble", url: "https://dribbble.com/pamodaravihansa" },
+            { icon: LinkedInMyIcon, label: "LinkedIn", url: "https://www.linkedin.com/in/pamoda-ravihansa/" }
+          ].map((item) => (
             <DockIcon key={item.label} className="dock_icon">
-              <Link
-                to="#"
+              <a
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label={item.label}
                 className={cn(
                   buttonVariants({ variant: "ghost", size: "icon" }),
@@ -73,7 +80,7 @@ const Homepage = () => {
                 )}
               >
                 <img src={item.icon} alt={item.label} className="size-6" />
-              </Link>
+              </a>
             </DockIcon>
           ))}
 
