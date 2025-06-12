@@ -156,7 +156,7 @@ const Homepage = () => {
               </p>
               <div className="about_buttons">
                 <a href="#">
-                  <div className="about_btn">
+                  <div data-hide-cursor className="about_btn">
                     <p className="font-pjs-b2-sb">See some photos I took</p>
                     <img src={UpArrow}
                       height={17}
@@ -166,7 +166,7 @@ const Homepage = () => {
                   </div>
                 </a>
                 <a href="#">
-                  <div className="about_btn">
+                  <div data-hide-cursor className="about_btn">
                     <p className="font-pjs-b2-sb">Let’s connect on Instagram!</p>
                     <img src={UpArrow}
                       height={17}
@@ -268,11 +268,15 @@ const Homepage = () => {
         <div className="section-divider" />
 
         <div className="footer_section">
+          {/* <PointerHighlight
+            rectangleClassName="bg-transparent border-[1px] border-solid border-[#ededed]"
+            pointerClassName="text-[#2e2e2e]">
+            <span data-hide-cursor data-item="pamoda.me " className="big_text">pamoda.me</span>
+          </PointerHighlight> */}
 
-          <PointerHighlight>
-            <span className="big_text">pamoda.me</span>
-          </PointerHighlight>
-          
+
+          <span data-hide-cursor data-item="pamoda.me " className="big_text">pamoda.me</span>
+
 
           <div className="bottom_section">
             <span className="font-pjs-b1-l">© 2025. Designed & Developed by Pamoda Ravihansa.</span>
