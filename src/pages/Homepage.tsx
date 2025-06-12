@@ -10,6 +10,7 @@ import { Check } from "lucide-react";
 import { Copy, } from "iconsax-react";
 import { useState, useEffect } from "react";
 import { PointerHighlight } from "../components/ui/pointer-highlight";
+import { TextAnimate } from "../components/magicui/text-animate";
 
 import HomeIcon from "../assets/icons/home-icon.svg";
 import BehanceIcon from "../assets/icons/behance-icon.svg";
@@ -27,6 +28,8 @@ import UpArrow from "../assets/icons/up-arrow.svg";
 
 import SyscoLabsLogo from "../assets/images/homepage/sysco-labs-logo.svg";
 import Code94LabsLogo from "../assets/images/homepage/code94-labs-logo.svg";
+
+import { motion } from "framer-motion";
 
 const Homepage = () => {
 
@@ -83,13 +86,21 @@ const Homepage = () => {
         </Dock>
       </div>
 
-      <div className="main_container">
+  {/* animate-fadeIn */}
+      <motion.div
+        className="main_container"
+        initial={{ opacity: 0, y: 32 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
 
         <div className="hero_container">
           <div className="hero_text_container">
+
             <div className="hero_title_text">
               <div className="lne_1">
-                <h1 className="font-pjs-h1">Hey, I’m</h1>
+                <h1 className="font-pjs-h1">  <TextAnimate animation="blurInUp" by="character" once>Hey, I’m</TextAnimate></h1>
+
                 <img
                   src={heroimage1x}
                   srcSet={`${heroimage1x} 1x, ${heroimage2x} 2x, ${heroimage3x} 3x`}
@@ -97,18 +108,21 @@ const Homepage = () => {
                   height={50}
                   alt="Pamoda's Potrait"
                 />
-                <h1 className="font-pjs-h1">Pamoda</h1>
+
+                <h1 className="font-pjs-h1"><TextAnimate animation="blurInUp" by="character" once>Pamoda</TextAnimate></h1>
               </div>
               <div className="line_2">
                 <h1 className="font-pjs-h1">
-                  <span>Designer & Problem Solver</span>
+                  <span><TextAnimate animation="blurInUp" by="character" once>Designer & Problem Solver</TextAnimate></span>
                 </h1>
               </div>
             </div>
+
             <div className="hero_description">
               <p className="font-pjs-b1-l">
-                Hi, I’m a UX Designer with <span className="font-pjs-b1-m">2 years of experience.</span><br></br>
-                Previously worked at <span className="font-pjs-b1-m">Sysco LABS</span> as a <span className="font-pjs-b1-m">Junior UX Engineer.</span> I work on web and product design, and I handle UI development as well.
+                  Hi, I’m a UX Designer with<span className="font-pjs-b1-m">2 years of experience.</span><br></br>
+                  Previously worked at <span className="font-pjs-b1-m">Sysco LABS</span> as a <span className="font-pjs-b1-m">Junior UX Engineer.</span> I work on web and product design, and I handle UI development as well.
+             
               </p>
             </div>
           </div>
@@ -296,7 +310,7 @@ const Homepage = () => {
           </div>
         </div>
 
-      </div >
+      </motion.div >
     </>
 
   );
