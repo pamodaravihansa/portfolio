@@ -108,6 +108,11 @@ body {
             border-width: 1px;
             border-color: $line-color;
             max-width: 37.5rem;
+            transition: transform 0.4s ease;
+
+            &:hover {
+                transform: scale(0.97);
+            }
 
             img {
                 padding: 1rem 1rem 0rem 1rem;
@@ -127,7 +132,6 @@ body {
                     color: $tertiary-text-color;
                 }
             }
-
         }
 
     }
@@ -323,29 +327,31 @@ body {
             width: 100%;
         }
 
-    }
-
-    .bottom_section {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
 
 
-        text-align: center;
-
-
-        .footer_icons {
+        .bottom_section {
             display: flex;
-            gap: 2rem;
-            justify-content: center;
+            flex-direction: column;
+            gap: 1.5rem;
 
-            img {
-                height: 24px;
-                width: 24px;
-                object-fit: contain;
+
+            text-align: center;
+
+
+            .footer_icons {
+                display: flex;
+                gap: 2rem;
+                justify-content: center;
+
+                img {
+                    height: 24px;
+                    width: 24px;
+                    object-fit: contain;
+                }
+
             }
-
         }
+
     }
 
 
