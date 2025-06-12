@@ -8,7 +8,7 @@ import { cn } from "../lib/utils";
 import { SmoothCursor } from "../components/ui/smooth-cursor";
 import { Check } from "lucide-react";
 import { Copy, } from "iconsax-react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { PointerHighlight } from "../components/ui/pointer-highlight";
 import { TextAnimate } from "../components/magicui/text-animate";
 
@@ -32,6 +32,8 @@ import Code94LabsLogo from "../assets/images/homepage/code94-labs-logo.svg";
 import { motion } from "framer-motion";
 
 const Homepage = () => {
+
+  const projectsRef = useRef<HTMLDivElement | null>(null);
 
   const [copied, setCopied] = useState(false);
 
@@ -93,7 +95,6 @@ const Homepage = () => {
         </Dock>
       </div>
 
-      {/* animate-fadeIn */}
       <motion.div
         className="main_container"
         initial={{ opacity: 0, y: 32 }}
@@ -134,7 +135,16 @@ const Homepage = () => {
             </div>
           </div>
           <div className="cta_buttons">
-            <Button variant="default" data-hide-cursor className="pt-[12px] pb-[13px] px-[24px] leading-[1.2]">See My Work</Button>
+            <Button
+              variant="default"
+              data-hide-cursor
+              onClick={() => {
+                projectsRef.current?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="pt-[12px] pb-[13px] px-[24px] leading-[1.2]"
+            >
+              See My Work
+            </Button>
             <Button variant="outline" data-hide-cursor className="pt-[12px] pb-[13px] px-[24px] leading-[1.2]">See My Resume</Button>
           </div>
 
@@ -143,6 +153,7 @@ const Homepage = () => {
         <div className="section-divider" />
 
         <motion.div
+          ref={projectsRef}
           className="projects_container"
           initial={{ opacity: 0, y: 48 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -186,7 +197,7 @@ const Homepage = () => {
                 Beyond design and development, I also have a love for<span className="font-pjs-b1-m"> photography,</span>  especially macro and wildlife photography.
               </p>
               <div className="about_buttons">
-                <a href="#">
+                <a href="https://www.facebook.com/pamodaravihansaphotography" target="_blank">
                   <div data-hide-cursor className="about_btn">
                     <p className="font-pjs-b2-sb">See some photos I took</p>
                     <img src={UpArrow}
@@ -196,7 +207,7 @@ const Homepage = () => {
                     />
                   </div>
                 </a>
-                <a href="#">
+                <a href="https://www.instagram.com/pamoda_ravihansa/" target="_blank">
                   <div data-hide-cursor className="about_btn">
                     <p className="font-pjs-b2-sb">Let’s connect on Instagram!</p>
                     <img src={UpArrow}
