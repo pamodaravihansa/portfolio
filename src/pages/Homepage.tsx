@@ -124,7 +124,7 @@ const Homepage = () => {
         <div className="projects_container">
           <h2 className="font-pjs-h2">Check Out My Cool Projects!</h2>
 
-          <div className="project_card">
+          <Link to="/projects/cafe" data-hide-cursor className="project_card">
             <img
               src={CafeprojectThumbnail}
               width={568}
@@ -137,7 +137,7 @@ const Homepage = () => {
                 Website Design for a Charming European Cafe Shop, Showcasing Authentic Cuisine and Inviting Atmosphere
               </h3>
             </div>
-          </div>
+          </Link>
 
 
         </div>
@@ -281,15 +281,17 @@ const Homepage = () => {
           <div className="bottom_section">
             <span className="font-pjs-b1-l">© 2025. Designed & Developed by Pamoda Ravihansa.</span>
             <div className="footer_icons">
-              <img src={BehanceIcon}
-                alt="Behance Icn"
-              />
-              <img src={DribbbleIcon}
-                alt="Behance Icn"
-              />
-              <img src={LinkedInMyIcon}
-                alt="Behance Icn"
-              />
+              <div className="footer_icons">
+                <a href="https://www.behance.net/pamodaravihansa" data-hide-cursor target="_blank" rel="noopener noreferrer">
+                  <img src={BehanceIcon} alt="Behance Icon" />
+                </a>
+                <a href="https://dribbble.com/pamodaravihansa" data-hide-cursor target="_blank" rel="noopener noreferrer">
+                  <img src={DribbbleIcon} alt="Dribbble Icon" />
+                </a>
+                <a href="https://www.linkedin.com/in/pamoda-ravihansa/" data-hide-cursor target="_blank" rel="noopener noreferrer">
+                  <img src={LinkedInMyIcon} alt="LinkedIn Icon" />
+                </a>
+              </div>
             </div>
           </div>
         </div>
