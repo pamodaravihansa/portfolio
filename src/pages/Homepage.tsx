@@ -121,14 +121,14 @@ const Homepage = () => {
               </div>
               <div className="line_2">
                 <h1 className="font-pjs-h1">
-                  <span><TextAnimate animation="blurInUp" by="character" once>Designer & Problem Solver</TextAnimate></span>
+                  <span><TextAnimate animation="blurInUp" by="character" once>UX Designer & Web Dev</TextAnimate></span>
                 </h1>
               </div>
             </div>
 
             <div className="hero_description">
               <p className="font-pjs-b1-l">
-                Hi, I’m a UX Designer with<span className="font-pjs-b1-m">2 years of experience.</span><br></br>
+                Hi, I’m a UX Designer with <span className="font-pjs-b1-m">2 years of experience.</span><br></br>
                 Previously worked at <span className="font-pjs-b1-m">Sysco LABS</span> as a <span className="font-pjs-b1-m">Junior UX Engineer.</span> I work on web and product design, and I handle UI development as well.
 
               </p>
@@ -152,31 +152,35 @@ const Homepage = () => {
 
         <div className="section-divider" />
 
-        <motion.div
+      <div
           ref={projectsRef}
           className="projects_container"
-          initial={{ opacity: 0, y: 48 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ once: true, amount: 0.3 }}
         >
           <h2 className="font-pjs-h2">Check Out My Cool Projects!</h2>
 
-          <Link to="/projects/cafe" data-hide-cursor className="project_card">
-            <img
-              src={CafeprojectThumbnail}
-              width={568}
-              height={375}
-              alt="Cafe Website Project Thumbnail"
-            />
-            <div className="project_text_container">
-              <p className="font-pjs-b1-l">Web Design &nbsp; / &nbsp; UI Design &nbsp; / &nbsp; UI Showcase</p>
-              <h3 className="font-pjs-h3">
-                Website Design for a Charming European Cafe Shop, Showcasing Authentic Cuisine and Inviting Atmosphere
-              </h3>
-            </div>
-          </Link>
-        </motion.div>
+         <motion.div
+           initial={{ opacity: 0, y: 48 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           transition={{ duration: 0.6, ease: "easeOut" }}
+           viewport={{ once: true, amount: 0 }}
+         >
+           <Link to="/projects/cafe" data-hide-cursor className="project_card">
+             <img
+               src={CafeprojectThumbnail}
+               width={568}
+               height={375}
+               alt="Cafe Website Project Thumbnail"
+             />
+             <div className="project_text_container">
+               <p className="font-pjs-b1-l">Web Design &nbsp; / &nbsp; UI Design &nbsp; / &nbsp; UI Showcase</p>
+               <h3 className="font-pjs-h3">
+                 Website Design for a Charming European Cafe Shop, Showcasing Authentic Cuisine and Inviting Atmosphere
+               </h3>
+             </div>
+           </Link>
+         </motion.div>
+         
+        </div>
 
         <div className="section-divider" />
 
@@ -326,7 +330,7 @@ const Homepage = () => {
           initial={{ opacity: 0, y: 48 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.1 }}
         >
 
           {/* <span

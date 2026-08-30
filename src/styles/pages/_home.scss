@@ -26,6 +26,7 @@ body {
     gap: 6rem;
     max-width: 52.5rem;
 
+
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 2.5rem;
@@ -83,6 +84,7 @@ body {
 
     .section-divider {
         width: 100vw;
+       //margin-left: calc(-1 * (100vw - 100%) / 2);
         height: 1px;
         background-color: $line-color;
 
@@ -257,7 +259,7 @@ body {
         display: flex;
         flex-direction: column;
         align-content: flex-start;
-        min-width: 37.5rem;
+        width: 100%;
         gap: 1.5rem;
 
         .email_container {
@@ -269,7 +271,7 @@ body {
             p {
                 font-family: 'Plus Jakarta Sans';
                 font-weight: 400;
-                font-size: 24px;
+                font-size: 1.5rem;
                 color: $secondary-text-color;
 
             }
@@ -306,28 +308,6 @@ body {
 
         }
 
-        // .big_text::before {
-        //     content: attr(data-item);
-        //     position: absolute;
-        //     inset: 0;
-        //     color: #1e1e1e;
-        //     width: 0;
-        //     overflow: hidden;
-        //     white-space: nowrap;
-        //     color: $primary-text-color;
-        //     background-clip: text;
-        //     -webkit-background-clip: text;
-        //     transition: width 1s ease-in-out;
-        //     // transition: width 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-        //     -webkit-text-stroke: 0;
-
-        // }
-
-        // .big_text:hover::before {
-        //     width: 100%;
-        // }
-
-
 
         .bottom_section {
             display: flex;
@@ -354,5 +334,43 @@ body {
 
     }
 
+}
 
+
+
+
+@media (max-width: 1024px) {
+    .main_container {
+        padding-inline: 4rem;
+        width: 80vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .main_container {
+        padding-inline: 2rem;
+
+        .contact_section {
+            .email_container {
+                p {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .main_container {
+        width: 90vw;
+        padding-inline: 1rem;
+
+        .contact_section {
+            .email_container {
+                p {
+                    font-size: 0.875rem;
+                }
+            }
+        }
+    }
 }
