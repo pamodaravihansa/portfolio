@@ -65,7 +65,7 @@ const Homepage = () => {
 
           <Separator orientation="vertical" className="h-full" />
 
-         {[
+          {[
             { icon: BehanceIcon, label: "Behance", url: "https://www.behance.net/pamodaravihansa" },
             { icon: DribbbleIcon, label: "Dribbble", url: "https://dribbble.com/pamodaravihansa" },
             { icon: LinkedInMyIcon, label: "LinkedIn", url: "https://www.linkedin.com/in/pamoda-ravihansa/" }
@@ -121,7 +121,7 @@ const Homepage = () => {
               </div>
               <div className="line_2">
                 <h1 className="font-pjs-h1">
-                  <span><TextAnimate animation="blurInUp" by="character" once>UX Designer & Web Dev</TextAnimate></span>
+                  <span><TextAnimate animation="blurInUp" by="character" once>UX Designer & Developer</TextAnimate></span>
                 </h1>
               </div>
             </div>
@@ -152,34 +152,34 @@ const Homepage = () => {
 
         <div className="section-divider" />
 
-      <div
+        <div
           ref={projectsRef}
           className="projects_container"
         >
           <h2 className="font-pjs-h2">Check Out My Cool Projects!</h2>
 
-         <motion.div
-           initial={{ opacity: 0, y: 48 }}
-           whileInView={{ opacity: 1, y: 0 }}
-           transition={{ duration: 0.6, ease: "easeOut" }}
-           viewport={{ once: true, amount: 0 }}
-         >
-           <Link to="/projects/cafe" data-hide-cursor className="project_card">
-             <img
-               src={CafeprojectThumbnail}
-               width={568}
-               height={375}
-               alt="Cafe Website Project Thumbnail"
-             />
-             <div className="project_text_container">
-               <p className="font-pjs-b1-l">Web Design &nbsp; / &nbsp; UI Design &nbsp; / &nbsp; UI Showcase</p>
-               <h3 className="font-pjs-h3">
-                 Website Design for a Charming European Cafe Shop, Showcasing Authentic Cuisine and Inviting Atmosphere
-               </h3>
-             </div>
-           </Link>
-         </motion.div>
-         
+          <motion.div
+            initial={{ opacity: 0, y: 48 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0 }}
+          >
+            <Link to="/projects/cafe" data-hide-cursor className="project_card">
+              <img
+                src={CafeprojectThumbnail}
+                width={568}
+                height={375}
+                alt="Cafe Website Project Thumbnail"
+              />
+              <div className="project_text_container">
+                <p className="font-pjs-b1-l">Web Design &nbsp; / &nbsp; UI Design &nbsp; / &nbsp; UI Showcase</p>
+                <h3 className="font-pjs-h3">
+                  Website Design for a Charming European Cafe Shop, Showcasing Authentic Cuisine and Inviting Atmosphere
+                </h3>
+              </div>
+            </Link>
+          </motion.div>
+
         </div>
 
         <div className="section-divider" />
